@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+img{
+    display:block;
+    max-width:100%;
+}
+body{
+    display:grid;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+    position:relative;
+    
+}
+
+.app{
+    display:grid;
+    background: linear-gradient(hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    color:white;
+    min-width:375px;
+    padding:1rem;
+}
+.infoBar{
+    border:1px solid grey;
+    display:grid;
+    grid-template-areas: "Gamename Score";
+    padding:1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.gameName{
+    font-size:1.2rem;
+    line-height:0.9rem; 
+}
+.scoreCounter{
+    background-color:white;
+    color:#222;
+    padding: 0.5rem 1rem;
+    border-radius:0.5rem;
+}
+.scoreCounter h3{
+    place-content:center;
+    display:grid;
+    font-size:1.8rem;
+}
+.gameselection{
+    display:grid;
+    grid-template-areas: "rock paper"
+                         "scissors scissors";
+    justify-content: center;
+    gap:3rem;
+}
+.gameselection div{
+    background-color: white;
+    border-radius:50%;
+    width:7rem;
+    padding:2rem;
+    cursor:pointer;
+}
+.gameselection img{
+    display:flex;
+    place-content: center;
+}
+.scissors{
+    transform: translateX(70%);
+    border:10px solid yellow ;
+    outline: 10px solid grey;
+
+}
+.paper{
+    border:10px solid blue ;
+    outline: 10px solid grey;
+    
+}
+.rock{
+    border:10px solid red ;
+    outline: 10px solid grey;
+}
